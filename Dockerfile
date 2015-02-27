@@ -11,17 +11,23 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     python \
   && rm -rf /var/lib/apt/lists/*
 
-RUN gpg --keyserver pool.sks-keyservers.net --recv-keys 9554F04D7259F04124DE6B476D5A82AC7E37093B DD8F2338BAE7501E3DD5AC78C273792F7D83545D
+ENV NODE_VERSION 0.10.36
+ENV NPM_VERSION 2.6.0
 
-ENV IOJS_VERSION 1.4.1
-
-RUN curl -SLO "https://iojs.org/dist/v$IOJS_VERSION/iojs-v$IOJS_VERSION-linux-x64.tar.gz" \
-  && curl -SLO "https://iojs.org/dist/v$IOJS_VERSION/SHASUMS256.txt.asc" \
+RUN buildDeps='curl' \
+  && set -x \
+  && apt-get update && apt-get install -y $buildDeps --no-install-recommends \
+  && rm -rf /var/lib/apt/lists/* \
+  && curl -SLO "http://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.tar.gz" \
+  && curl -SLO "http://nodejs.org/dist/v$NODE_VERSION/SHASUMS256.txt.asc" \
   && gpg --verify SHASUMS256.txt.asc \
-  && grep " iojs-v$IOJS_VERSION-linux-x64.tar.gz\$" SHASUMS256.txt.asc | sha256sum -c - \
-  && tar -xzf "iojs-v$IOJS_VERSION-linux-x64.tar.gz" -C /usr/local --strip-components=1 \
-  && rm "iojs-v$IOJS_VERSION-linux-x64.tar.gz" SHASUMS256.txt.asc
+  && grep " node-v$NODE_VERSION-linux-x64.tar.gz\$" SHASUMS256.txt.asc | sha256sum -c - \
+  && tar -xzf "node-v$NODE_VERSION-linux-x64.tar.gz" -C /usr/local --strip-components=1 \
+  && rm "node-v$NODE_VERSION-linux-x64.tar.gz" SHASUMS256.txt.asc \
+  && apt-get purge -y --auto-remove $buildDeps \
+  && npm install -g npm@"$NPM_VERSION" \
+  && npm cache clear
 
-CMD [ "iojs" ]
+CMD [ "node" ]
 
 
