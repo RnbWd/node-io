@@ -1,9 +1,17 @@
-FROM buildpack-deps:wheezy-curl
+FROM debian:wheezy
 
 MAINTAINER David Wisner dwisner6@gmail.com
 
-RUN gpg --keyserver pool.sks-keyservers.net \
-  --recv-keys 846ca8ed78d63926a5f75e46653d173f1773241a43b65c0148eb492248a5efd2 DD8F2338BAE7501E3DD5AC78C273792F7D83545D
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    ca-certificates \
+    curl \
+    build-essential \
+    pkg-config \
+    git \
+    python \
+  && rm -rf /var/lib/apt/lists/*
+
+RUN gpg --keyserver pool.sks-keyservers.net --recv-keys 9554F04D7259F04124DE6B476D5A82AC7E37093B DD8F2338BAE7501E3DD5AC78C273792F7D83545D
 
 ENV IOJS_VERSION 1.4.1
 
@@ -15,6 +23,5 @@ RUN curl -SLO "https://iojs.org/dist/v$IOJS_VERSION/iojs-v$IOJS_VERSION-linux-x6
   && rm "iojs-v$IOJS_VERSION-linux-x64.tar.gz" SHASUMS256.txt.asc
 
 CMD [ "iojs" ]
-
 
 
