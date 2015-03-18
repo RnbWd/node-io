@@ -5,7 +5,7 @@ Minimal Node / IO build based on debian:wheezy and the original [node:slim](http
 
 `docker pull rnbwd/node-io:latest`
 
-## Node 0.10.36 (npm 2.7.1)
+## Node 0.10.37 (npm 2.7.1)
 
 `docker pull rnbwd/node-io:0.10`
 
