@@ -9,7 +9,7 @@ Minimal Node / IO build based on debian:wheezy and the original [node:slim](http
 
 `docker pull rnbwd/node-io:0.10`
 
-## Node 0.12 (npm 2.6.0)
+## Node 0.12 (npm 2.5.1)
 
 I consider this v0.12 unstable - use at your own risk
 
