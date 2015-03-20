@@ -1,7 +1,7 @@
 # node-io
 Minimal Node / IO build based on debian:wheezy and the original [node:slim](https://github.com/docker-library/node/blob/master/0.10/slim/Dockerfile)
 
-## IO 1.5.1
+## IO 1.6.1
 
 `docker pull rnbwd/node-io:latest`
 
