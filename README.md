@@ -25,6 +25,6 @@ Minimal Node / IOJS build based on debian:wheezy and the original [node:slim](ht
 
 `docker pull rnbwd/node-io:1.5.0`
 
-Feel free to submit an issue or pull request if you'd other versions of node / iojs suported. My goal is support IOJS > 1.5. Node will be updated with the most recent npm version, and iojs will come as is.
+Feel free to submit an issue or pull request if you'd like other versions of node / iojs suported. My goal is support IOJS > 1.5. Node will be updated with the most recent npm version, and iojs will come as is.
 
 Namaste
