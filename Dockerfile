@@ -2,7 +2,7 @@ FROM debian:wheezy
 
 MAINTAINER David Wisner dwisner6@gmail.com
 
-ENV IOJS_VERSION 1.6.1
+ENV IOJS_VERSION 1.6.2
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     ca-certificates \
