@@ -13,7 +13,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     python \
   && rm -rf /var/lib/apt/lists/*
 
-RUN gpg --keyserver pool.sks-keyservers.net --recv-keys 9554F04D7259F04124DE6B476D5A82AC7E37093B DD8F2338BAE7501E3DD5AC78C273792F7D83545D
+RUN gpg --keyserver pool.sks-keyservers.net \
+  --recv-keys DD8F2338BAE7501E3DD5AC78C273792F7D83545D
 
 RUN curl -SLO "https://iojs.org/dist/v$IOJS_VERSION/iojs-v$IOJS_VERSION-linux-x64.tar.gz" \
   && curl -SLO "https://iojs.org/dist/v$IOJS_VERSION/SHASUMS256.txt.asc" \
