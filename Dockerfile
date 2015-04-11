@@ -5,12 +5,14 @@ MAINTAINER David Wisner dwisner6@gmail.com
 ENV IOJS_VERSION 1.6.4
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    ca-certificates \
-    curl \
     build-essential \
-    pkg-config \
     git \
+    libssl-dev \
     python \
+    curl \
+    ca-certificates \
+    pkg-config \
+    curl \
   && rm -rf /var/lib/apt/lists/*
 
 RUN gpg --keyserver pool.sks-keyservers.net --recv-keys \
