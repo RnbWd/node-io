@@ -7,11 +7,11 @@ Minimal Node / IOJS build based on debian:wheezy and the original [node:slim](ht
 
 `docker pull rnbwd/node-io:latest` - or - `docker pull rnbwd/node-io:1.6`
 
-## Node [0.10.38](http://blog.nodejs.org/2015/03/23/node-v0-10-38-maintenance/) (npm 2.7.8)
+## Node [0.10.38](http://blog.nodejs.org/2015/03/23/node-v0-10-38-maintenance/) (npm 2.7.5)
 
 `docker pull rnbwd/node-io:0.10`
 
-## Node [0.12.2](http://blog.nodejs.org/2015/03/31/node-v0-12-2-stable/) (npm 2.7.8)
+## Node [0.12.2](http://blog.nodejs.org/2015/03/31/node-v0-12-2-stable/) (npm 2.7.5)
 
 `docker pull rnbwd/node-io:0.12`
 
@@ -30,7 +30,5 @@ Minimal Node / IOJS build based on debian:wheezy and the original [node:slim](ht
 For RaspberryPI, use the [rpi branch](https://github.com/RnbWd/node-io/tree/rpi)
 
 Feel free to submit an issue or pull request if you'd like other versions of node / iojs suported. My goal is support IOJS > 1.5. Node will be updated with the most recent npm version, and iojs will come as is.
-
-Namaste
 
 Namaste
