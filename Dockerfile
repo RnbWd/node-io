@@ -5,7 +5,6 @@ MAINTAINER David Wisner dwisner6@gmail.com
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     git \
-    libssl-dev \
     python \
     curl \
     ca-certificates \
