@@ -3,18 +3,20 @@ FROM debian:wheezy
 MAINTAINER David Wisner dwisner6@gmail.com
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    ca-certificates \
-    curl \
     build-essential \
-    pkg-config \
     git \
+    libssl-dev \
     python \
+    curl \
+    ca-certificates \
+    pkg-config \
+    curl \
   && rm -rf /var/lib/apt/lists/*
 
 RUN gpg --keyserver pool.sks-keyservers.net --recv-keys 7937DFD2AB06298B2293C3187D33FF9D0246406D 114F43EE0176B71C7BC219DD50A3051F888C628D
 
 ENV NODE_VERSION 0.12.2
-ENV NPM_VERSION 2.7.5
+ENV NPM_VERSION 2.7.8
 
 RUN curl -SLO "http://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.tar.gz" \
   && curl -SLO "http://nodejs.org/dist/v$NODE_VERSION/SHASUMS256.txt.asc" \
