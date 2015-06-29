@@ -3,19 +3,21 @@ node-io
 
 Minimal Node / IOJS build based on debian:wheezy and the original [node:slim](https://github.com/docker-library/node/blob/master/0.10/slim/Dockerfile)
 
-## IOJS [1.7.1](https://github.com/iojs/io.js/blob/v1.x/CHANGELOG.md)
+## IOJS [2.3.1](https://github.com/nodejs/io.js/blob/master/CHANGELOG.md)
 
-`docker pull rnbwd/node-io:latest` - or - `docker pull rnbwd/node-io:1.7`
+`docker pull rnbwd/node-io:latest` - or - `docker pull rnbwd/node-io:2.3`
 
-## Node [0.10.38](http://blog.nodejs.org/2015/03/23/node-v0-10-38-maintenance/) (npm 2.7.6)
+## Node [0.10.39](http://blog.nodejs.org/2015/03/23/node-v0-10-38-maintenance/) (npm 2.12.0)
 
 `docker pull rnbwd/node-io:0.10`
 
-## Node [0.12.2](http://blog.nodejs.org/2015/03/31/node-v0-12-2-stable/) (npm 2.7.6)
+## Node [0.12.5](http://blog.nodejs.org/2015/03/31/node-v0-12-2-stable/) (npm 2.12.0)
 
 `docker pull rnbwd/node-io:0.12`
 
 ## IOJS Versions Supported:
+
+`docker pull rnbwd/node-io:2.3.1`
 
 `docker pull rnbwd/node-io:1.7.1`
 
