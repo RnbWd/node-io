@@ -1,4 +1,4 @@
-nnode-io
+node-io
 ----
 
 Minimal Node / IOJS build based on debian:wheezy and the original [node:slim](https://github.com/docker-library/node/blob/master/0.10/slim/Dockerfile)
