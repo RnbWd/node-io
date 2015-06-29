@@ -7,11 +7,11 @@ Minimal Node / IOJS build based on debian:wheezy and the original [node:slim](ht
 
 `docker pull rnbwd/node-io:latest` - or - `docker pull rnbwd/node-io:2.3`
 
-## Node [0.10.39](http://blog.nodejs.org/2015/03/23/node-v0-10-38-maintenance/) (npm 2.12.0)
+## Node [0.10.39](http://blog.nodejs.org/2015/06/22/node-v0-10-39-maintenance/) (npm 2.12.0)
 
 `docker pull rnbwd/node-io:0.10`
 
-## Node [0.12.5](http://blog.nodejs.org/2015/03/31/node-v0-12-2-stable/) (npm 2.12.0)
+## Node [0.12.5](http://blog.nodejs.org/2015/06/22/node-v0-12-5-stable/)
 
 `docker pull rnbwd/node-io:0.12`
 
