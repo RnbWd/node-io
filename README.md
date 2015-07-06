@@ -11,11 +11,13 @@ Minimal Node / IOJS build based on debian:wheezy and the original [node:slim](ht
 
 `docker pull rnbwd/node-io:0.10`
 
-## Node [0.12.5](http://blog.nodejs.org/2015/06/22/node-v0-12-5-stable/)
+## Node [0.12.6](http://blog.nodejs.org/2015/06/22/node-v0-12-5-stable/)
 
 `docker pull rnbwd/node-io:0.12`
 
 ## IOJS Versions Supported:
+
+`docker pull rnbwd/node-io:2.3.3`
 
 `docker pull rnbwd/node-io:2.3.1`
 
