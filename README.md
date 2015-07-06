@@ -3,7 +3,7 @@ node-io
 
 Minimal Node / IOJS build based on debian:wheezy and the original [node:slim](https://github.com/docker-library/node/blob/master/0.10/slim/Dockerfile)
 
-## IOJS [2.3.1](https://github.com/nodejs/io.js/blob/master/CHANGELOG.md)
+## IOJS [2.3.3](https://github.com/nodejs/io.js/blob/master/CHANGELOG.md)
 
 `docker pull rnbwd/node-io:latest` - or - `docker pull rnbwd/node-io:2.3`
 
