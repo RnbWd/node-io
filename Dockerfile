@@ -1,19 +1,8 @@
-FROM debian:wheezy
+FROM rnbwd/d-wheezy
 
 MAINTAINER David Wisner dwisner6@gmail.com
 
 ENV IOJS_VERSION 2.3.3
-
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    build-essential \
-    git \
-    libssl-dev \
-    python \
-    curl \
-    ca-certificates \
-    pkg-config \
-    curl \
-  && rm -rf /var/lib/apt/lists/*
 
 RUN gpg --keyserver pool.sks-keyservers.net --recv-keys \
   9554F04D7259F04124DE6B476D5A82AC7E37093B \
