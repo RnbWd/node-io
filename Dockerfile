@@ -1,23 +1,20 @@
-FROM debian:wheezy
+FROM rnbwd/d-wheezy
 
 MAINTAINER David Wisner dwisner6@gmail.com
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    build-essential \
-    git \
-    python \
-    ca-certificates \
-    pkg-config \
-    curl \
-  && rm -rf /var/lib/apt/lists/*
+RUN set -ex \
+  && for key in \
+    7937DFD2AB06298B2293C3187D33FF9D0246406D \
+    114F43EE0176B71C7BC219DD50A3051F888C628D \
+  ; do \
+    gpg --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; \
+  done
 
-RUN gpg --keyserver pool.sks-keyservers.net --recv-keys 7937DFD2AB06298B2293C3187D33FF9D0246406D 114F43EE0176B71C7BC219DD50A3051F888C628D
+ENV NODE_VERSION 0.12.7
+ENV NPM_VERSION 2.14.0
 
-ENV NODE_VERSION 0.12.6
-ENV NPM_VERSION 2.12.1
-
-RUN curl -SLO "http://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.tar.gz" \
-  && curl -SLO "http://nodejs.org/dist/v$NODE_VERSION/SHASUMS256.txt.asc" \
+RUN curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.tar.gz" \
+  && curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/SHASUMS256.txt.asc" \
   && gpg --verify SHASUMS256.txt.asc \
   && grep " node-v$NODE_VERSION-linux-x64.tar.gz\$" SHASUMS256.txt.asc | sha256sum -c - \
   && tar -xzf "node-v$NODE_VERSION-linux-x64.tar.gz" -C /usr/local --strip-components=1 \
