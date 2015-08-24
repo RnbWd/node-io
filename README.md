@@ -15,7 +15,7 @@ Minimal `node.js` / `io.js` build based on `debian:wheezy` and the original [nod
 
 `docker pull rnbwd/node-io:0.10`
 
-## IOJS Versions Supported:
+## io.js Versions Supported:
 
 `docker pull rnbwd/node-io:3.1.0`
 
