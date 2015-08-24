@@ -2,7 +2,7 @@ FROM rnbwd/d-wheezy
 
 MAINTAINER David Wisner dwisner6@gmail.com
 
-ENV IOJS_VERSION 2.4.0
+ENV IOJS_VERSION 2.5.0
 
 RUN gpg --keyserver pool.sks-keyservers.net --recv-keys \
   9554F04D7259F04124DE6B476D5A82AC7E37093B \
