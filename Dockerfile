@@ -1,8 +1,18 @@
-FROM rnbwd/d-wheezy
+FROM resin/rpi-raspbian
 
 MAINTAINER David Wisner dwisner6@gmail.com
 
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    git \
+    python \
+    curl \
+    ca-certificates \
+    pkg-config \
+  && rm -rf /var/lib/apt/lists/*
+
 ENV NODE_VERSION 4.1.1
+ENV NODE_ARCH armv7l
 
 RUN set -ex \
   && for key in \
@@ -16,11 +26,11 @@ RUN set -ex \
     gpg --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; \
   done
 
-RUN curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.tar.gz" \
+RUN curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-$NODE_ARCH.tar.gz" \
   && curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/SHASUMS256.txt.asc" \
   && gpg --verify SHASUMS256.txt.asc \
-  && grep " node-v$NODE_VERSION-linux-x64.tar.gz\$" SHASUMS256.txt.asc | sha256sum -c - \
-  && tar -xzf "node-v$NODE_VERSION-linux-x64.tar.gz" -C /usr/local --strip-components=1 \
-  && rm "node-v$NODE_VERSION-linux-x64.tar.gz" SHASUMS256.txt.asc
+  && grep " node-v$NODE_VERSION-linux-$NODE_ARCH.tar.gz\$" SHASUMS256.txt.asc | sha256sum -c - \
+  && tar -xzf "node-v$NODE_VERSION-linux-$NODE_ARCH.tar.gz" -C /usr/local --strip-components=1 \
+  && rm "node-v$NODE_VERSION-linux-$NODE_ARCH.tar.gz" SHASUMS256.txt.asc
 
 CMD [ "node" ]
