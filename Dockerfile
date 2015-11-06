@@ -2,7 +2,7 @@ FROM rnbwd/d-wheezy
 
 MAINTAINER David Wisner dwisner6@gmail.com
 
-ENV NODE_VERSION 4.1.1
+ENV NODE_VERSION 4.2.2
 
 RUN set -ex \
   && for key in \
