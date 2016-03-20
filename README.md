@@ -3,9 +3,13 @@ node-io
 
 Minimal `node.js` / `io.js` build based on `debian:wheezy` and the original [node:slim](https://github.com/docker-library/node/blob/master/0.10/slim/Dockerfile). Sticking with lts at the moment for compatibility.
 
+# stable/node.js [5.9.0](https://github.com/nodejs/node/blob/v4.2.2/CHANGELOG.md)
+
+`docker pull`docker pull rnbwd/node-io:latest` rnbwd/node-io:5.9.0`
+
 ## lts/node.js [4.2.2](https://github.com/nodejs/node/blob/v4.2.2/CHANGELOG.md)
 
-`docker pull rnbwd/node-io:latest` - or - `docker pull rnbwd/node-io:4.2.2`
+`docker pull`docker pull rnbwd/node-io:4.2.2`
 
 ## node.js [0.12.7](http://blog.nodejs.org/2015/07/10/node-v0-12-7-stable/) (npm 2.14.5)
 
