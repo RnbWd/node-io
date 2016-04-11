@@ -1,19 +1,28 @@
 node-io
 ----
 
-Minimal `node.js` / `io.js` build based on `debian:wheezy` and the original [node:slim](https://github.com/docker-library/node/blob/master/0.10/slim/Dockerfile)
+![node 5.10.1](https://img.shields.io/badge/node-5.10.1-brightgreen.svg?style=flat-square)
+![node 4.4.2](https://img.shields.io/badge/node-4.4.2-brightgreen.svg?style=flat-square)
+![node 0.12.13](https://img.shields.io/badge/node-0.12.13-brightgreen.svg?style=flat-square)
+![node 0.10.44](https://img.shields.io/badge/node-0.10.44-brightgreen.svg?style=flat-square)
+[![Docker Stars](https://img.shields.io/docker/stars/rnbwd/node-io.svg?style=flat-square)](https://hub.docker.com/r/rnbwd/node-io/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/rnbwd/node-io.svg?style=flat-square)](https://hub.docker.com/r/rnbwd/node-io/)
+[![Docker Size](https://img.shields.io/imagelayers/image-size/rnbwd/node-io/latest.svg?style=flat-square)](https://hub.docker.com/r/rnbwd/node-io/)
+![License MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)
 
-## latest/node.js [4.x](https://github.com/nodejs/node/blob/master/CHANGELOG.md)
+Minimal `node.js` / `io.js` build based on `debian:wheezy` and the original [node:slim](https://github.com/docker-library/node/blob/master/0.10/slim/Dockerfile). Sticking with lts at the moment for compatibility.
 
-`docker pull rnbwd/node-io:latest` - or - `docker pull rnbwd/node-io:4.1.1`
+> `docker pull rnbwd/node-io:latest`
 
-## node.js [0.12.7](http://blog.nodejs.org/2015/07/10/node-v0-12-7-stable/) (npm 2.14.5)
+## Node Versions
 
-`docker pull rnbwd/node-io:0.12`
+`docker pull rnbwd/node-io:latest` - [v5.10.1](https://github.com/nodejs/node/blob/v5.10.1/CHANGELOG.md)
 
-## node.js [0.10.40](http://blog.nodejs.org/2015/07/09/node-v0-10-40-maintenance/) (npm 2.14.5)
+`docker pull rnbwd/node-io:lts` - [v4.4.2](https://github.com/nodejs/node/blob/v4.4.2/CHANGELOG.md)
 
-`docker pull rnbwd/node-io:0.10`
+`docker pull rnbwd/node-io:0.12.13`
+
+`docker pull rnbwd/node-io:0.10.44`
 
 ## io.js Versions Supported:
 
