@@ -2,7 +2,7 @@ FROM rnbwd/d-wheezy
 
 MAINTAINER David Wisner dwisner6@gmail.com
 
-ENV NODE_VERSION 5.10.1
+ENV NODE_VERSION 4.4.2
 
 # gpg keys listed at https://github.com/nodejs/node
 RUN set -ex \
