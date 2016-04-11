@@ -1,23 +1,25 @@
 node-io
 ----
 
+![node 5.10.1](https://img.shields.io/badge/node-5.10.1-brightgreen.svg?style=flat-square)
+[![Docker Stars](https://img.shields.io/docker/stars/rnbwd/node-io.svg?style=flat-square)](https://hub.docker.com/r/rnbwd/node-io/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/rnbwd/node-io.svg?style=flat-square)](https://hub.docker.com/r/rnbwd/node-io/)
+[![Docker Size](https://img.shields.io/imagelayers/image-size/rnbwd/node-io/latest.svg?style=flat-square)](https://hub.docker.com/r/rnbwd/node-io/)
+![License MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)
+
 Minimal `node.js` / `io.js` build based on `debian:wheezy` and the original [node:slim](https://github.com/docker-library/node/blob/master/0.10/slim/Dockerfile). Sticking with lts at the moment for compatibility.
 
-# stable/node.js [5.9.0](https://github.com/nodejs/node/blob/v5.9.0/CHANGELOG.md)
+> `docker pull rnbwd/node-io:latest`
 
-`docker pull rnbwd/node-io:latest` `docker pull rnbwd/node-io:5.9.0`
+## Node Versions
 
-## lts/node.js [4.2.2](https://github.com/nodejs/node/blob/v4.2.2/CHANGELOG.md)
+`docker pull rnbwd/node-io:5.10.1` - [v5.10.1](https://github.com/nodejs/node/blob/v5.10.1/CHANGELOG.md)
 
-`docker pull`docker pull rnbwd/node-io:4.2.2`
+`docker pull`docker pull rnbwd/node-io:4.4.2` - [4.4.2](https://github.com/nodejs/node/blob/v4.4.2/CHANGELOG.md)
 
-## node.js [0.12.7](http://blog.nodejs.org/2015/07/10/node-v0-12-7-stable/) (npm 2.14.5)
+`docker pull rnbwd/node-io:0.12.13`
 
-`docker pull rnbwd/node-io:0.12`
-
-## node.js [0.10.40](http://blog.nodejs.org/2015/07/09/node-v0-10-40-maintenance/) (npm 2.14.5)
-
-`docker pull rnbwd/node-io:0.10`
+`docker pull rnbwd/node-io:0.10.44`
 
 ## io.js Versions Supported:
 
